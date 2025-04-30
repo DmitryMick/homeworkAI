@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store API Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Store API Test</h1>
+            <p class="subtitle">Automated validation of product data</p>
+        </header>
+
+        <div class="test-controls">
+            <button id="runTests" class="primary-btn">Run Tests</button>
+            <div class="test-status">
+                <span id="testStatus">Ready to test</span>
+                <div id="loadingSpinner" class="spinner hidden"></div>
+            </div>
+        </div>
+
+        <div class="test-results">
+            <div class="result-section">
+                <h2>Server Response</h2>
+                <div id="serverResponse" class="result-box">
+                    <p>Status: <span id="responseStatus">-</span></p>
+                    <p>Time: <span id="responseTime">-</span></p>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2>Data Validation Results</h2>
+                <div class="validation-summary">
+                    <div class="summary-item">
+                        <h3>Total Products</h3>
+                        <p id="totalProducts">-</p>
+                    </div>
+                    <div class="summary-item">
+                        <h3>Products with Issues</h3>
+                        <p id="productsWithIssues">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2>Defective Products</h2>
+                <div id="defectiveProducts" class="defective-list">
+                    <p class="no-data">No defective products found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
