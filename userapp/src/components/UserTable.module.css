@@ -1,0 +1,122 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #fafbfc;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 2.5rem;
+}
+
+.table {
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow, .dataRow {
+  display: grid;
+  grid-template-columns: 2.5fr 3fr 1.5fr 1.5fr 2fr 0.7fr;
+  align-items: center;
+  padding: 1.25rem 1.7rem;
+}
+
+.headerRow {
+  background: #f5f6f8;
+  font-weight: 700;
+  color: #a0a4ab;
+  font-size: 0.92rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid #ececf0;
+}
+
+.headerRow > div:last-child {
+  text-align: center;
+  color: #d1b1b1;
+}
+
+.dataRow {
+  background: #fafbfc;
+  border-bottom: 1px solid #f0f1f3;
+  transition: background 0.18s;
+  min-height: 3.5rem;
+}
+
+.dataRow:last-child {
+  border-bottom: none;
+}
+
+.dataRow:hover {
+  background: #f2f5fa;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: color 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clickable:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+.name {
+  font-weight: 700;
+  color: #18191a;
+  font-size: 1.13rem;
+  line-height: 1.2;
+}
+
+.email {
+  font-size: 0.95rem;
+  color: #8a8d91;
+  margin-top: 0.1rem;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deleteBtn {
+  background: none;
+  color: #e14b4b;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.deleteBtn:hover {
+  background: #ffeaea;
+  color: #b00020;
+}
+
+@media (max-width: 900px) {
+  .table {
+    min-width: 600px;
+  }
+  .headerRow, .dataRow {
+    font-size: 0.97rem;
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .table {
+    min-width: 400px;
+  }
+  .headerRow, .dataRow {
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 1.5fr 0.7fr;
+    font-size: 0.92rem;
+    padding: 0.5rem 0.2rem;
+  }
+} 

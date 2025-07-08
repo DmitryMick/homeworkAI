@@ -1,0 +1,28 @@
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fb;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 2.2rem;
+  margin-top: 0.5rem;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.error {
+  color: #b00020;
+  background: #fff0f0;
+  border: 1px solid #ffcccc;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+} 
