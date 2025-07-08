@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  userstore-postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+
+  # Spring Boot Application
+  userstore-app:
+    build: .
+    container_name: userstore-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://userstore-postgres:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+    depends_on:
+      - userstore-postgres
